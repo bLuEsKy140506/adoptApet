@@ -3,12 +3,15 @@ import Hero from '../../components/hero';
 import { getPets } from '../../api/petfinder';
 import Pet from '../../components/pet';
 // Import useSearchParams
+import { useSearchParams } from 'react-router-dom'; // Import useSearchParams
 
 const SearchPage = () => {
 
   // Get searchParams object from useSearchParams
+  const [searchParams] = useSearchParams(); // Get searchParams object
+  // Extract the pet name from the searchParams 
 
-  const petNameToFind = 'REPLACE ME';  // Get query parameter using searchParams object
+  const petNameToFind = searchParams.get('name'); // Get query parameter using searchParams object
 
   const [pets, setPets] = useState([]);
 

@@ -18,9 +18,9 @@ const appRouter = createBrowserRouter(
       <Route path=":type" element={<HomePage />} />
       <Route path="/:type/:id" element={<PetDetailsPage />} />
       {/* Add a route for search page */}
-      <Route path="/search" element={<SearchPage />} />
+      <Route path="search" element={<SearchPage />} />
       <Route path="/pet/:id" element={<PetDetailsPage />} />
-      <Route path="*" element={<PetDetailsNotFound />} />
+      <Route path="pet-details-not-found" element={<PetDetailsNotFound />} />
     </Route>
   )
 );
